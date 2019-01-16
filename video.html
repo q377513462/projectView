@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <meta name="keywords" content="yc,ycinfo,hyycinfo,源辰,源辰信息科技有限公司,衡阳源辰,衡阳源辰信息科技有限公司">
+    <meta name="description" content="衡阳源辰信息科技有限公司官方网站">
+    <title>源辰信息科技</title>
+
+    <style>
+        body,html{
+            width:100%;
+            height:100%;
+            margin:0
+        }
+        #loading-layer{
+            background-color:#fff;
+            position:absolute;
+            z-index:999;
+            left:0;
+            right:0;
+            top:0;
+            bottom:0
+        }
+        #loading-container{
+            width:120px;
+            height:120px;
+            border:1px solid #ececec;
+            border-radius:50%;
+            position:absolute;
+            left:50%;
+            top:50%;
+            -webkit-transform:translate(-50%,-50%);
+            -moz-transform:translate(-50%,-50%);
+            transform:translate(-50%,-50%)
+        }
+        #logo{
+            background: url("imgs/logo.png") no-repeat left center;
+            background-size:contain;
+            padding-left: 2.5rem;
+        }
+        #app{
+            display:none;
+        }
+
+
+        .myvideo{
+            width:25%;
+            height:250px;
+            background: url("imgs/test.jpg");
+            background-size: 100% 100%;
+            border: 1px solid deepskyblue;
+            border-radius: 5px;
+            float: left;
+            margin: 40px 4% 10px;
+            position: relative;
+            overflow: hidden;
+        }
+        .myvideo div{
+            position: absolute;
+            width:100%;
+            height:100%;
+            background-color: rgba(100,100,100,0.7);
+            top:100%;
+            transition: 0.6s;
+        }
+        .myvideo:hover div{
+            top:0%;
+            cursor: pointer;
+        }
+        .myvideo p{
+            font-size:26px;
+            line-height: 50px;
+            margin-top: 20px;
+            color:deepskyblue;
+        }
+
+        .centerInfo{
+            width: 100%;
+            height: 100%;
+            background-color: rgba(100,100,100,0.7);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            z-index: 9999;
+            padding-top: 8%;
+            display: none;
+            transition: 0.5s;
+        }
+        #testVideo{
+            width: 80%;
+            height: auto;
+            margin: 0 auto;
+            outline:2px solid #ccc;
+        }
+    </style>
+    <link href="css/app.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/Dvideo.css">
+    <link rel="stylesheet" href="font-icon/style.css">
+</head>
+<body>
+    <div id="app">
+        <div class="page-index" id="container" data-reactroot="">
+            <header class="com-header pr">
+                <div class="large-screen cf">
+                    <div class="logo fl">
+                        <a href="index.html" id="logo">源辰信息科技</a>
+                    </div>
+                    <nav class="nav fr pr">
+                        <a style="" name="首页" class="active" href="index.html">首页</a>
+                        <a name="新闻动态" class="" href="http://www.hyycinfo.com/moreNews.html">新闻动态</a>
+                        <a name="学生墙" target="_blank" title="172839150" href="http://www.hyycinfo.com/findWork.html">学生就业墙</a>
+                        <a title="路漫漫其修远兮吾将上下而求索" name="开班计划" class="" href="javascript:void(0)" onclick="myalter()">开班计划</a>
+                    </nav>
+                </div>
+            </header>
+            <div class="com-body overflow-hidden">
+                <section class="bg"></section>
+                <section class="intro">
+                    <div class="myvideo" data-url="video/test.wmv">
+                        <div>
+                            <p>源辰53班</p>
+                            <p>张三，李四，王五</p>
+                            <p>天涯明月刀</p>
+                        </div>
+                    </div>
+                    <div class="myvideo" data-url="video/aolisha.mp4">
+                        <div>
+                            <p>源辰53班</p>
+                            <p>张三，李四，王五</p>
+                            <p>天涯明月刀</p>
+                        </div>
+                    </div>
+                    <div class="myvideo" data-url="video/aolisha.mp4">
+                        <div>
+                            <p>源辰53班</p>
+                            <p>张三，李四，王五</p>
+                            <p>天涯明月刀</p>
+                        </div>
+                    </div>
+                    <div class="myvideo" data-url="video/xuanchuanshipin.mp4">
+                        <div>
+                            <p>源辰53班</p>
+                            <p>张三，李四，王五</p>
+                            <p>天涯明月刀</p>
+                        </div>
+                    </div>
+                    <div class="myvideo" data-url="video/videotest.mp4">
+                        <div>
+                            <p>源辰53班</p>
+                            <p>张三，李四，王五</p>
+                            <p>天涯明月刀</p>
+                        </div>
+                    </div>
+                    <div class="myvideo" data-url="video/xuanchuanshipin.mp4">
+                        <div>
+                            <p>源辰53班</p>
+                            <p>张三，李四，王五</p>
+                            <p>天涯明月刀</p>
+                        </div>
+                    </div>
+                </section>
+                <div class="centerInfo">
+                    <div id="testVideo"></div>
+                </div>
+            </div>
+            <footer class="com-footer">
+                <div class="com-width text">
+                    <div>Copyright 2017 hyycinfo <a href="mailto:hyycinfo@qq.com">hyycinfo@qq.com</a></div>
+                    <div><a target="_blank" href="https://www.hyycinfo.com">你还在等什么，赶紧加入我们吧</a></div>
+                </div>
+            </footer>
+        </div>
+    </div>
+    <div id="loading-layer">
+        <div id="loading-container"></div>
+    </div>
+
+    <!--引入jquery-->
+    <script src="js/jquery-1.11.3.js"></script>
+    <!--引入jparticles-->
+    <script src="js/jparticles.js"></script>
+    <script src="js/particle.js"></script>
+    <script src="js/wave_loading.js"></script>
+    <!--引入弹出框插件-->
+    <script src="js/plug-in.js"></script>
+    <!--引入视频插件-->
+    <script src="js/Dvideo.js"></script>
+
+    <script>
+        var loading = new JParticles.waveLoading('#loading-container', {
+            // [font style][font weight][font size][font family]
+            // 文本样式，同css一样，必须包含 [font size] 和 [font family]
+            font: 'normal 900 16px Arial',
+            smallFont: 'normal 900 14px Arial',
+            // 对于不需要自适应的，应该设置为 false，
+            // 减少计算，提高性能
+            resize: false
+        });
+
+        var canvass=document.getElementById("loading-container").getElementsByTagName("canvas")[0];
+        document.querySelector('#loading-layer').className="zoomout";
+        document.querySelector('#loading-container').removeChild(canvass);
+        document.querySelector('#app').style.display = 'block';
+
+
+        loading.onDestroy(function () {
+            var particle= new JParticles.particle('.bg',{
+                // 两粒子圆心点之间的直线距离为 90
+                proximity: 100,
+                // 定位点半径 100 以内（包含）的所有粒子，圆心点之间小于等于 proximity 值，则连线
+                range: 1000,
+                // 开启视差效果
+                parallax: true
+            });
+        });
+
+        setTimeout(function(){
+            loading.done();
+        },0)
+
+        //弹出层
+        function myalter(){
+            //随机效果
+            var randoms=["slideFromTop","slideFromBottom","showSweetAlert","layerFadeIn","layer-fadeInUpBig","layer-rollIn",
+                "layer-fadeIn","layer-shake","layer-spread"];
+            var index=Math.floor( Math.random()*randoms.length );
+            $.Pop('源辰66班，java方向，正在火热报名中。<br />源辰67班，java方向，11月底12月初，即将开班。<br />TEL：17707317432<br />' +
+                    'QQ：2796685324&nbsp;&nbsp;&nbsp;&nbsp;阳端',{
+                Title:"源辰开班计划",
+                Animation:randoms[index]
+            });
+        }
+
+        //视频相关
+
+        //点击外界部分隐藏
+
+
+
+        //视频点击事件
+        $(".myvideo").click(function(){
+            $(".centerInfo").css("display","block");
+            var video = new Dvideo ({
+                ele: '#testVideo',
+                title: 'Pneumatic Tokyo - EnV',
+                nextVideoExtend: function () {
+                    alert('您点击了下一页')
+                },
+                showNext: false,
+                width: '70%',
+                height: '80%',
+                src: $(this).data("url"),
+                autoplay: true,
+                setVideoDefinition: function (type, e, current) {
+                    if (type === '0') {
+                        // video.setVideoInfo('這是標清','这里填写视频的标清地址',current)
+                    }
+                    if (type === '1') {
+                        // video.setVideoInfo('這是標清','这里填写视频的高清地址',current)
+                    }
+                    if (type === '2') {
+                        // video.setVideoInfo('這是標清','这里填写视频的超清地址',current)
+                    }
+                    video.showLoading(false);
+                    setTimeout(function () {
+                        video.videoEle.currentTime = current;
+                        video.videoPlay();
+                        video.showLoading(false);
+                    }, 3000);
+                },
+            });
+        });
+    </script>
+</body>
+</html>
